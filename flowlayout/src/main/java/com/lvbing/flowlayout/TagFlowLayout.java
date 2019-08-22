@@ -105,7 +105,7 @@ public class TagFlowLayout extends FlowLayout
 
             tagViewContainer = new TagView(getContext());
             tagView.setDuplicateParentStateEnabled(true);
-            if (tagView.getLayoutParams() != null) {
+            /*if (tagView.getLayoutParams() != null) {
                 tagViewContainer.setLayoutParams(tagView.getLayoutParams());
 
 
@@ -118,9 +118,9 @@ public class TagFlowLayout extends FlowLayout
                         dip2px(getContext(), 5),
                         dip2px(getContext(), 5));
                 tagViewContainer.setLayoutParams(lp);
-            }
-            ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-            tagView.setLayoutParams(lp);
+            }*/
+            /*ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            tagView.setLayoutParams(lp);*/
             tagViewContainer.addView(tagView);
             addView(tagViewContainer);
 

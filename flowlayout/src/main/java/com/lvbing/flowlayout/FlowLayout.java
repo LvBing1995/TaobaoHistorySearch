@@ -19,7 +19,7 @@ public class FlowLayout extends ViewGroup {
     private static final int CENTER = 0;
     private static final int RIGHT = 1;
 
-    private int limitLineCount; //默认显示3行 断词条显示3行，长词条显示2行
+    private int limitLineCount; //默认显示3行
     private boolean isLimit; //是否有行限制
     private boolean isOverFlow; //是否溢出2行
 

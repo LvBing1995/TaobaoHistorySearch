@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         //创建历史标签适配器
         //为标签设置对应的内容
         mRecordsAdapter = new TagAdapter<String>(recordList) {
-
             @Override
             public View getView(FlowLayout parent, int position, String s) {
                 TextView tv = (TextView) LayoutInflater.from(MainActivity.this).inflate(R.layout.tv_history,
