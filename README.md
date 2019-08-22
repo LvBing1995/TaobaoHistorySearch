@@ -1,7 +1,7 @@
-## 历史搜索流式布局##
+## 历史搜索流式布局展开收缩
  因为公司要求历史搜索做流式布局并且要支持展开收缩，然后这种网上果然有，别人的拿来用下，有点小bug进行了修复。
 
-## 使用 ##
+## 使用 
 ```javascript
   dependencies {
             implementation 'com.github.LvBing1995:TaobaoHistorySearch:1.0.1'
