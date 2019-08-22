@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -79,19 +80,27 @@ public class TagFlowLayout extends FlowLayout
     }
 
 
-    public void setOnTagClickListener(OnTagClickListener onTagClickListener) {
+    public TagFlowLayout setOnTagClickListener(OnTagClickListener onTagClickListener) {
         mOnTagClickListener = onTagClickListener;
+        return this;
     }
 
-    public void setOnLongClickListener(OnLongClickListener onLongClickListener) {
+    public TagFlowLayout setOnLongClickListener(OnLongClickListener onLongClickListener) {
         mOnLongClickListener = onLongClickListener;
+        return this;
     }
 
-    public void setAdapter(TagAdapter adapter) {
+    @Override
+    public ViewTreeObserver getViewTreeObserver() {
+        return super.getViewTreeObserver();
+    }
+
+    public TagFlowLayout setAdapter(TagAdapter adapter) {
         mTagAdapter = adapter;
         mTagAdapter.setOnDataChangedListener(this);
         mSelectedView.clear();
         changeAdapter();
+        return this;
     }
 
     @SuppressWarnings("ResourceType")

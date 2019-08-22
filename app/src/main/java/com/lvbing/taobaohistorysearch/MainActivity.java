@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
 
-        tagFlowLayout.setAdapter(mRecordsAdapter);
-        tagFlowLayout.setOnTagClickListener(new TagFlowLayout.OnTagClickListener() {
+        tagFlowLayout.setAdapter(mRecordsAdapter)
+         .setOnTagClickListener(new TagFlowLayout.OnTagClickListener() {//点击事件
             @Override
             public void onTagClick(View view, int position, FlowLayout parent) {
                 //清空editText之前的数据
@@ -79,10 +79,8 @@ public class MainActivity extends AppCompatActivity {
                 //将获取到的字符串传到搜索结果界面,点击后搜索对应条目内容
                 editText.setText(recordList.get(position));
                 editText.setSelection(editText.length());
-            }
-        });
-        //删除某个条目
-        tagFlowLayout.setOnLongClickListener(new TagFlowLayout.OnLongClickListener() {
+            }})
+         .setOnLongClickListener(new TagFlowLayout.OnLongClickListener() {//长按事件
             @Override
             public void onLongClick(View view, final int position) {
                 showDialog("确定要删除该条历史记录？", new DialogInterface.OnClickListener() {
@@ -93,10 +91,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-        });
-
-        //view加载完成时回调
-        tagFlowLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+         })
+        .getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { //view加载完成时回调
             @Override
             public void onGlobalLayout() {
                 boolean isOverFlow = tagFlowLayout.isOverFlow();
