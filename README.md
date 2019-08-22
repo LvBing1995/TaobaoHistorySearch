@@ -16,8 +16,8 @@
             app:is_limit="true"//是否启用展开收缩功能
             app:limit_line_count="2"//超过2行进行收缩
             app:max_select="2">//最大选择数adapter里有回调
-            ```
-```javascript
+            
+
  //为标签设置对应的内容
         TagAdapter mRecordsAdapter = new TagAdapter<String>(recordList) {
             @Override
